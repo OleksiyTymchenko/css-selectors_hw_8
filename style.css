@@ -113,9 +113,14 @@ h4 {
   width: 100%;
 }
 
+.list .list__item:active {
+  background-color: #be0000;
+}
+
 .list .list__item:hover {
   border-top: 3px solid #fff;
   border-bottom: 3px solid #fff;
+  transition: all .1s ease-in;
 }
 
 .list .list__item:nth-child(odd) {
@@ -124,9 +129,16 @@ h4 {
   border-bottom: 3px solid #88839e;
 }
 
+ul.list li:nth-child(2n) .list__item {
+  background-color: #7a7593;
+  border-top: 3px solid #7a7593;
+  border-bottom: 3px solid #7a7593;
+}
+
 .list .list__item:nth-child(odd):hover {
   border-top: 3px solid #fff;
   border-bottom: 3px solid #fff;
+  transition: all .1s ease-in;
 }
 
 .product {
@@ -160,12 +172,7 @@ input[type="checkbox"]:checked {
   /* Стиль для вибраного чекбокса */
   background-color: white;
 }
-input[type="checkbox"]:checked {
-  background-image: url("./img/Checklist.png");
-  background-size: cover;
-  width: 19px;
-  height: 19px;
-}
+
 
 .wish{
   text-align: center;
@@ -174,14 +181,7 @@ input[type="checkbox"]:checked {
   color: #FF8984;
 }
 
-input[type="checkbox"]:checked {
-  background-image: url("./img/Checklist.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 19px;
-  height: 19px;
-}
+
 
 input[type="checkbox"]:checked::before {
   content: "";
@@ -192,3 +192,8 @@ input[type="checkbox"]:checked::before {
   background-size: cover;
   background-position: center;
 }
+
+.list__item input[type="checkbox"]:checked  {
+  background-color: #fff;
+}
+
