@@ -30,6 +30,7 @@ body {
   background-color: #fff;
   color: #000;
   padding: 10px;
+  
 }
 
 ul {
@@ -98,6 +99,7 @@ h4 {
   background-color: #3b3f45;
   color: #fff;
   padding: 20px 0 45px;
+  min-height: calc(100vh - 140px);
 }
 
 .hero ul.list {
@@ -106,15 +108,18 @@ h4 {
 }
 
 .list .list__item {
-  background-color: #7a7593;
+  background-color: #88839e;
+  border-top: 3px solid #88839e;
+  border-bottom: 3px solid #88839e;
   padding: 11px 0 13px 12px;
-  border-top: 3px solid #7a7593;
-  border-bottom: 3px solid #7a7593;
   width: 100%;
 }
 
-.list .list__item:active {
+.list .list__item:active,
+ul.list li:nth-child(2n) .list__item:active{
   background-color: #be0000;
+  transition: all .1s ease-in;
+
 }
 
 .list .list__item:hover {
@@ -123,11 +128,7 @@ h4 {
   transition: all .1s ease-in;
 }
 
-.list .list__item:nth-child(odd) {
-  background-color: #88839e;
-  border-top: 3px solid #88839e;
-  border-bottom: 3px solid #88839e;
-}
+
 
 ul.list li:nth-child(2n) .list__item {
   background-color: #7a7593;
